@@ -1,8 +1,14 @@
 // WAP to find reverse of string using recursion
 #include<stdio.h>
 
-char rev(char arr[],int size){
-    return arr[size-1];
+void rev(char arr[],int start,int end){
+    if(start>=end){
+        return;
+    }
+    char temp = arr[start];
+    arr[start]=arr[end];
+    arr[end]=temp;
+    rev(arr,start+1,end-1);
 }
 
 int main(){
@@ -10,6 +16,9 @@ int main(){
     int size;
     printf("\nEnter a string:");
     scanf("%99s",&str);
-    size = sizeof(str)/sizeof(str[0]);
-    printf("%c",rev(str,size));  
+    for(int i=0;str[i]!='\0';i++){
+        size = i+1;
+    }
+    rev(str,0,(size-1));
+    printf("%s",str);  
 }
