@@ -18,7 +18,6 @@ int main(){
         printf("\nEnter a value of (%d) element:",i+1);
         scanf("%d",&arr[i] );
     }
-    int size = sizeof(arr)/sizeof(arr[0]);
-    printf("\nMaximum number:%d",max(arr,size));
+    printf("\nMaximum number:%d",max(arr,n));
     return 0;
 }   
