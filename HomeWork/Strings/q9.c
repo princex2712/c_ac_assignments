@@ -24,6 +24,6 @@ int main(){
             Special++;
         }
     }
-    printf("\nvowels: %d\nConsonants: %d\nDigit: %d\nSpace: %d\nSpecial: %d",Vowels,Consonants,Space,Special);
+    printf("\nvowels: %d\nConsonants: %d\nDigit: %d\nSpace: %d\nSpecial: %d",Vowels,Consonants,Digits,Space,Special);
     return 0;
 }
