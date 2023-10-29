@@ -1,4 +1,5 @@
-// 5. String Palindrome Program in C With Explanation
+// 8. String Palindrome Program in C With Explanation
+
 #include<stdio.h>
 #include<ctype.h>
 
@@ -29,6 +30,8 @@ int main(){
             break;
         }
     }
+
+    //printing result
     if(flag==1){
         printf("\nYour String is Palindrome");
     }else{
