@@ -29,6 +29,8 @@ int main(){
             break;
         }
     }
+
+    //printing result
     if(flag==1){
         printf("\nYour String is Palindrome");
     }else{

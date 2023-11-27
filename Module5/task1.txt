@@ -1,0 +1,129 @@
+(1) Create Table Name : Student and Exam
+
+    CREATE TABLE student(
+        Roll_no INT AUTO_INCREMENT PRIMARY KEY,
+        Name VARCHAR(50),
+        Branch VARCHAR(255)
+    );
+
+
+    CREATE TABLE exam(
+        Roll_no INT,
+        S_Code VARCHAR(50),
+        Marks INT,
+        P_Code VARCHAR(50), 
+        FOREIGN KEY(Roll_no)REFERENCES student(Roll_no)
+    );
+
+
+(2)Create table given below 
+
+    CREATE TABLE bio(
+        First_Name VARCHAR(50),
+        Last_Name VARCHAR(50),
+        Address VARCHAR(255),
+        City VARCHAR(50),
+        Age INT 
+    );
+
+(3)Create table given below: Employee and Incentive
+
+=>  Employee
+
+ CREATE TABLE Employee(
+        Employee_id INT AUTO_INCREMENT PRIMARY KEY,
+        First_name VARCHAR(50),
+        Last_name VARCHAR(50),
+        Salary INT,
+        Joining_date DATE,
+        Department VARCHAR(50)
+    );
+
+=>  Incentive
+
+ CREATE TABLE Incentive(
+        Employee_ref_id INT,
+        Incentive_date DATE,
+        Incentive_amount INT
+    );
+
+(A) Get First_Name from employee table using Tom name “Employee Name”.
+
+SELECT First_name FROM Employee WHERE First_name LIKE '%Tom%';
+
++------------+
+| First_name |
++------------+
+| Tom        |
++------------+
+
+(B) Get FIRST_NAME, Joining Date, and Salary from employee table.
+
+SELECT First_name,Joining_date,Salary FROM Employee;
+
++------------+--------------+---------+
+| First_name | Joining_date | Salary  |
++------------+--------------+---------+
+| John       | 2013-01-01   | 1000000 |
+| Michael    | 2013-01-01   |  800000 |
+| Roy        | 2013-02-01   |  700000 |
+| Tom        | 2013-02-01   |  600000 |
+| Jerry      | 2013-02-01   |  650000 |
+| Philip     | 2013-01-01   |  750000 |
+| TestName1  | 2013-01-01   |  650000 |
+| TestName2  | 2013-02-01   |  600000 |
++------------+--------------+---------+
+
+(C) Get all employee details from the employee table order by First_Name Ascending and Salary descending?
+
+SELECT * FROM Employee
+Order By First_Name ASC, Salary DESC;
+
++-------------+------------+-----------+---------+--------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_date | Department |
++-------------+------------+-----------+---------+--------------+------------+
+|           5 | Jerry      | Pinto     |  650000 | 2013-02-01   | Insurance  |
+|           1 | John       | Abraham   | 1000000 | 2013-01-01   | Banking    |
+|           2 | Michael    | Clarke    |  800000 | 2013-01-01   | Insurance  |
+|           6 | Philip     | Mathew    |  750000 | 2013-01-01   | Services   |
+|           3 | Roy        | Thomas    |  700000 | 2013-02-01   | Banking    |
+|           7 | TestName1  | TestName2 |  650000 | 2013-01-01   | Services   |
+|           8 | TestName2  | Lname%    |  600000 | 2013-02-01   | Insurance  |
+|           4 | Tom        | Jose      |  600000 | 2013-02-01   | Insurance  |
++-------------+------------+-----------+---------+--------------+------------+
+
+(D) Get employee details from employee table whose first name contains ‘J’.
+
+SELECT * FROM Employee WHERE First_name LIKE 'J%';
+
++-------------+------------+-----------+---------+--------------+------------+
+| Employee_id | First_name | Last_name | Salary  | Joining_date | Department |
++-------------+------------+-----------+---------+--------------+------------+
+|           1 | John       | Abraham   | 1000000 | 2013-01-01   | Banking    |
+|           5 | Jerry      | Pinto     |  650000 | 2013-02-01   | Insurance  |
++-------------+------------+-----------+---------+--------------+------------+
+
+(E) Get department wise maximum salary from employee table order by salary ascending?
+
+SELECT Department, Max(Salary) AS Max_salary FROM Employee GROUP BY Department ORDER BY Max_salary ASC;
++------------+------------+
+| Department | Max_salary |
++------------+------------+
+| Services   |     750000 |
+| Insurance  |     800000 |
+| Banking    |    1000000 |
++------------+------------+
+
+(F) Select first_name, incentive amount from employee and incentives table for those employees who have incentives and incentive amount greater than 3000 
+
+SELECT Employee.First_Name,Incentive.Incentive_amount FROM Employee LEFT JOIN Incentive On Employee.Employee_id = Incentive.Employee_ref_id WHERE Incentive_amount>3000;
++------------+------------------+
+| First_Name | Incentive_amount |
++------------+------------------+
+| John       |             5000 |
+| Roy        |             4000 |
+| John       |             4500 |
+| Michael    |             3500 |
++------------+------------------+
+
+(G) Create After Insert trigger on Employee table which insert records in view table
