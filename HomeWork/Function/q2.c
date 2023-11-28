@@ -7,6 +7,18 @@ int main(){
     scanf("%d",&c);
     switch(c){
         case 1:
+            double num1;
+            printf("\nEnter Your Number: ");
+            scanf("%lf",&num1);
+            int decimal =0,i1=0,reminder;
+            while(num1!=0){
+                reminder = (int)fmod(num1,10);
+                num1 /=10;
+                decimal += reminder * pow(2,i1);
+                i1++;
+            }
+            printf("Coverted Number: %d",decimal);
+            break;
         case 2:
             int num;
             printf("\nEnter Your Number: ");
@@ -17,7 +29,7 @@ int main(){
                 num /= 2;
                 i++;
             }
-            printf("Coverted Number: %lf",binary);
+            printf("Coverted Number: %f",binary);
             break;
 
     }

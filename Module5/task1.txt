@@ -127,3 +127,37 @@ SELECT Employee.First_Name,Incentive.Incentive_amount FROM Employee LEFT JOIN In
 +------------+------------------+
 
 (G) Create After Insert trigger on Employee table which insert records in view table
+
+
+(4) Create table given below: Salesperson and Customer
+
+CREATE TABLE Salesperson (SNo INT PRIMARY KEY,SNAME VARCHAR(50),CITY VARCHAR(50),COMM FLOAT);
+
+CREATE TABLE CUSTOMER(CNM INT PRIMARY KEY,CNAME VARCHAR(50),CITY VARCHAR(50),RATING INT,SNo INT ,FOREIGN KEY (SNo) REFERENCES Salesperson(SNo));
+
+(A) All orders for more than $1000.
+
+(B) Names and cities of all salespeople in London with commission above 0.12
+
+
+SELECT SNAME, CITY FROM Salesperson WHERE COMM > 0.12 AND CITY = 'London'; 
+
+
+(C) All salespeople either in Barcelona or in London
+
+
+SELECT SNAME, CITY FROM Salesperson WHERE CITY = 'Barcelona' OR CITY = 'London'; 
+
+
+(D) All salespeople with commission between 0.10 and 0.12. (Boundary values
+should be excluded).
+
+
+SELECT SName, COMM FROM Salesperson WHERE COMM >0.10 AND COMM <0.12;
+
+
+(E) All customers excluding those with rating <= 100 unless they are located in
+Rome 
+
+
+SELECT CNAME, CITY FROM CUSTOMER WHERE RATING > 100 OR (RATING <= 100 AND CITY = 'Roe');
