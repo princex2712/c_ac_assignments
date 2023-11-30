@@ -1,0 +1,56 @@
+(1) What do you understand By Database
+=> Database means collection of structured information. And it allow to retrieve data and easy to manage using DBMS;  
+
+(2) What is Normalization?
+=> Normalization means orgenize data in a structured manner and reduce data Redundancy means make database simple.
+
+(3) What is Difference between DBMS and RDBMS?
+=>
+(4) What is MF Cod Rule of RDBMS Systems?
+=>
+(5) What do you understand By Data Redundancy?
+=> Means by Redundancy is same data stored in more than one place and it cause data storage and data complexity. To reduce data Redundancy Normalization is used.
+
+(6) What is DDL Interpreter?
+=> DDL Stands for Data definition language. DDL Interpreter is a component of DBMS and DDL Statement used to modify,define and manage database.
+
+(7) What is DML in SQL?
+=> DML stands for Data manipulation language. DML include Insert,update,delete and select Statement. 
+
+(8) What is SQL Key Constraints writing an Example of SQL Key Constraints
+=> Key Constraints is used to do some uniqueness and relation between columns. there are many types of Constraints like primary key, unique key,  foreign key etc.
+   For Example:- 
+    (A) PRIMARY KEY is used to identify each data in a table.
+        CREATE TABLE STUDENT(Roll_No INT PRIMARY KEY, Name VARCHAR(255),MOBILE INT);
+    (B) UNIQUE KEY is used to make sure that each data in specific column is unique.
+        CREATE TABLE STUDENT(Roll_No INT PRIMARY KEY, Name VARCHAR(255),MOBILE INT UNIQUE);
+
+(9) What is save Point? How to create a save Point write a Query?
+=> SavePoint is used to rollback at some where you mentioned savepoint without affecting data.
+   For Example:-
+        START TRANSACTION;
+
+        INSERT INTO CUSTOMERS(CustomerID,CustomerName,CustomerEmail)
+        VALUES(101,'Eren Yeager','erenyeager@gmail.com');
+
+        SAVEPOINT mysavepoint;
+        
+        INSERT INTO CUSTOMERS(CustomerID,CustomerName,CustomerEmail)
+        VALUES(102,'Mikasa Ackerman','mikasa321@gmail.com');
+
+        ROLLBACK TO SAVEPOINT mysavepoint;
+
+        COMMIT;
+
+
+(10) What is trigger and how to create a Trigger in SQL? 
+=> Trigger is a set of instruction which automatically execute on certain events.
+
+   For Example:-
+        CREATE TABLE Example(ID INT PRIMARY KEY,DATA VARCHAR(50),LASTUPDATED TIMESTAMP );
+
+
+        CREATE TRIGGER update_timestamp
+        AFTER UPDATE ON Example
+        FOR EACH ROW
+        SET NEW.LASTUPDATED = NOW();
