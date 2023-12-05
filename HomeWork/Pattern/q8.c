@@ -1,18 +1,14 @@
-// 7.Right Arrow Star Pattern
-
+// 8.Left Arrow * Pattern
 #include<stdio.h>
 
 int main(){
-    printf("\nRight Arrow\n");
+    printf("\nPatetrn\n");
     for(int i=1;i<=7;i++){
         for(int j=1;j<=7-i;j++){
-           printf(" ");
-        }
-        for(int k=1;k<=i;k++){
             printf(" ");
         }
-        for(int l=1;l<=i;l++){
-            if(l==i || l==i-1){
+        for(int k=1;k<=i;k++){
+            if(k==1 || k==2){
                 printf("*");
             }else{
                 printf(" ");
@@ -20,16 +16,12 @@ int main(){
         }
         printf("\n");
     }
-
     for(int i=7;i>=1;i--){
         for(int j=1;j<=7-i;j++){
-           printf(" ");
-        }
-        for(int k=1;k<=i;k++){
             printf(" ");
         }
-        for(int l=2;l<=i;l++){
-            if(l==i || l==i-1){
+        for(int k=0;k<=i;k++){
+            if(k==0 || (k==1 && i!=1) ){
                 printf("*");
             }else{
                 printf(" ");
@@ -37,6 +29,5 @@ int main(){
         }
         printf("\n");
     }
-    
     return 0;
 }
