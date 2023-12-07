@@ -1,0 +1,10 @@
+Q.Define the terms: Website, Webpage, Web browser, Web server, HTML,CSS
+=>Website is a collection of Webpages, multimedia element, and digital content like picture, video etc.
+
+=>Webpage is a individual page in the Website and it contain text, and many more content, you can access it using web browser.
+
+=>Web server is a software or hardware that stores, process and deliver to user in the response to their request.
+
+=>HTML stands for Hypertext Markup Language. It is use to create structure and layout of webpage such as heading, buttons etc.
+
+=>CSS stand for cascading style sheet and in simple words it is use to design the webpage content such nas button, text etc.
