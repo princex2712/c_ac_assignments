@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Roulette</title>
+</head>
+<style>
+    .container-first {
+        display: flex;
+        flex-flow: column-reverse wrap;
+        align-content: center;
+        width: auto;
+        height: 300px;
+        padding: 0px 0px 0px 20px;
+        background-color: green;
+        border-top: 2px sold white;
+        justify-items: center;
+    }
+
+    .red-item,
+    .black-item,
+    .zero-item {
+        box-sizing: border-box;
+        border: none;
+        border-left: 3px solid white;
+        border-top: 3px solid white;
+        padding-top: 25px;
+        padding-bottom: 15px;
+        text-align: center;
+        width: 50px;
+        font-size: 30px;
+        color: white;
+    }
+
+    .zero-item {
+        background-color: green;
+        border-bottom: 3px solid white;
+        padding-top: 80px;
+        padding-bottom: 111px;
+    }
+
+    .red-item {
+        background-color: red;
+    }
+
+    .black-item {
+        background-color: black;
+    }
+
+    .column-item {
+        border: solid white;
+        background-color: green;
+        padding-top: 19px;
+        padding-bottom: 19px;
+        text-align: center;
+        width: 80px;
+        font-size: 30px;
+        color: white;
+    }
+
+    .container-second {
+        display: flex;
+        background-color: green;
+        width: auto;
+        height: 70px;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        padding: 0px 0px 0px 72px;
+        justify-content: center;
+
+    }
+
+    .doz-item {
+        flex-basis: 195px;
+        border: solid white;
+        background-color: green;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        text-align: center;
+        height: 20px;
+        font-size: 30px;
+        color: white;
+    }
+
+    .container-third {
+        display: flex;
+        background-color: green;
+        width: auto;
+        height: 150px;
+        flex-flow: row wrap;
+        align-content: flex-start;
+        padding: 0px 0px 0px 72px;
+        justify-content: center;
+    }
+
+    .outside-section {
+        flex-basis: 95px;
+        border: solid white;
+        background-color: green;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        text-align: center;
+        height: 20px;
+        font-size: 30px;
+        color: white;
+    }
+
+    .rhomb-red {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        border: solid white;
+    }
+
+    .rhomb-black {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: black;
+        border: solid white;
+    }
+</style>
+
+<body>
+    <div class="container-first">
+        <div class="zero-item">
+            <div class="value">0</div>
+        </div>
+        <div class="red-item">
+            <div class="value">1</div>
+        </div>
+        <div class="black-item">
+            <div class="value">2</div>
+        </div>
+        <div class="red-item">
+            <div class="value">3</div>
+        </div>
+        <div class="black-item">
+            <div class="value">4</div>
+        </div>
+        <div class="red-item">
+            <div class="value">5</div>
+        </div>
+        <div class="black-item">
+            <div class="value">6</div>
+        </div>
+        <div class="red-item">
+            <div class="value">7</div>
+        </div>
+        <div class="black-item">
+            <div class="value">8</div>
+        </div>
+        <div class="red-item">
+            <div class="value">9</div>
+        </div>
+        <div class="black-item">
+            <div class="value">10</div>
+        </div>
+        <div class="black-item">
+            <div class="value">11</div>
+        </div>
+        <div class="red-item">
+            <div class="value">12</div>
+        </div>
+        <div class="black-item">
+            <div class="value">13</div>
+        </div>
+        <div class="red-item">
+            <div class="value">14</div>
+        </div>
+        <div class="black-item">
+            <div class="value">15</div>
+        </div>
+        <div class="red-item">
+            <div class="value">16</div>
+        </div>
+        <div class="black-item">
+            <div class="value">17</div>
+        </div>
+        <div class="red-item">
+            <div class="value">18</div>
+        </div>
+        <div class="red-item">
+            <div class="value">19</div>
+        </div>
+        <div class="black-item">
+            <div class="value">20</div>
+        </div>
+        <div class="red-item">
+            <div class="value">21</div>
+        </div>
+        <div class="black-item">
+            <div class="value">22</div>
+        </div>
+        <div class="red-item">
+            <div class="value">23</div>
+        </div>
+        <div class="black-item">
+            <div class="value">24</div>
+        </div>
+        <div class="red-item">
+            <div class="value">25</div>
+        </div>
+        <div class="black-item">
+            <div class="value">26</div>
+        </div>
+        <div class="red-item">
+            <div class="value">27</div>
+        </div>
+        <div class="black-item">
+            <div class="value">28</div>
+        </div>
+        <div class="black-item">
+            <div class="value">29</div>
+        </div>
+        <div class="red-item">
+            <div class="value">30</div>
+        </div>
+        <div class="black-item">
+            <div class="value">31</div>
+        </div>
+        <div class="red-item">
+            <div class="value">32</div>
+        </div>
+        <div class="black-item">
+            <div class="value">33</div>
+        </div>
+        <div class="red-item">
+            <div class="value">34</div>
+        </div>
+        <div class="black-item">
+            <div class="value">35</div>
+        </div>
+        <div class="red-item">
+            <div class="value">36</div>
+        </div>
+        <div class="column-item">
+            <div class="value">2-1</div>
+        </div>
+        <div class="column-item">
+            <div class="value">2-1</div>
+        </div>
+        <div class="column-item">
+            <div class="value">2-1</div>
+        </div>
+
+    </div>
+    <div class="container-second">
+        <div class="doz-item">
+            <div>1st 12</div>
+        </div>
+        <div class="doz-item">
+            <div>2nd 12</div>
+        </div>
+        <div class="doz-item">
+            <div>3rd 12</div>
+        </div>
+    </div>
+    <div class="container-third">
+        <div class="outside-section">
+            <div>1-18</div>
+        </div>
+        <div class="outside-section">
+            <div>EVEN</div>
+        </div>
+        <div class="outside-section">
+            <div>
+                <div class="rhomb-red"></div>
+            </div>
+        </div>
+        <div class="outside-section">
+            <div>
+                <div class="rhomb-black"></div>
+            </div>
+        </div>
+        <div class="outside-section">
+            <div>ODD</div>
+        </div>
+        <div class="outside-section">
+            <div>19-36</div>
+        </div>
+    </div>
+</body>
+
+</html>
+</body>
+
+</html>
