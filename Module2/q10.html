@@ -1,39 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        form {
-            width: 300px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            color: #464646;
-            font-size: 20px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style2.css">
 </head>
 
 <body>
-    <form>
-        <h2>Registration Form</h2>
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="text" id="email" name="email"><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password"><br>
-        <label for="confirmpassword">Confirm Password:</label><br>
-        <input type="password" id="confirmpassword" name="confirmpassword"><br>
-        <input type="submit" value="Submit">
-    </form>
+    <h1>User Particulars</h1>
+    <h2>Personal Particulars</h2>
+    <label for="salutation">Salutation Select</label>
+    <select name="salutation" id="salutation">
+        <option value="mr">Mr.</option>
+        <option value="mrs">Mrs.</option>
+        <option value="miss">Miss</option>
+    </select>
+    <h2>Account Particulars</h2>
+    <label for="login-id">Login ID</label>
+    <input type="text" id="login-id" name="login-id">
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <label for="confirm-password">Confirm Password</label>
+    <input type="password" id="confirm-password" name="confirm-password">
+    <label for="middle-name">Middle Name</label>
+    <input type="text" id="middle-name" name="middle-name">
+    <h2>Country Select</h2>
+    <label for="resident-status">Resident Status Select</label>
+    <select name="resident-status" id="resident-status">
+        <option value="indian">Indian</option>
+        <option value="foreigner">Foreigner</option>
+    </select>
+    <label for="email-id">Email-Id</label>
+    <input type="email" id="email-id" name="email-id">
+    <h2>Individual Registration</h2>
+    <label for="fund-transfer">Fund Transfer Select</label>
+    <select name="fund-transfer" id="fund-transfer">
+        <option value="account">Account</option>
+        <option value="customer">Customer</option>
+    </select>
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" name="first-name">
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" name="last-name">
+    <h2>Country Select</h2>
+    <label for="country">Country Select</label>
+    <select name="country" id="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+    </select>
+    <label for="mobile-number">Mobile Number</label>
+    <input type="text" id="mobile-number" name="mobile-number">
+    <h2>Nick Name</h2>
+    <label for="nick-name">Nick Name</label>
+    <input type="text" id="nick-name" name="nick-name">
+    <h2>DECLARATION</h2>
+    <p>I have read, understood and hereby agree to the Terms and Conditions in respect of all products and channels. I
+        understand that any changes in the terms and conditions applicable to this relationship would be made available
+        to me on request at any IOB branches. I confirm that all accounts under this login name are operated singly and
+        in case of joint account operated by either or survivor / anyone or survivor (s) under his / her joint name
+        respectively. I do hereby declare that information furnished in this form is true to the best of my knowledge
+        and belief.</p>
+    <button type="submit">Submit</button>
 </body>
 
 </html>
