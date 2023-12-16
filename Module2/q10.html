@@ -2,67 +2,193 @@
 <html lang="en">
 
 <head>
+    <title></title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <link rel="stylesheet" href="style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style2.css" rel="stylesheet">
 </head>
 
-<body>
-    <h1>User Particulars</h1>
-    <h2>Personal Particulars</h2>
-    <label for="salutation">Salutation Select</label>
-    <select name="salutation" id="salutation">
-        <option value="mr">Mr.</option>
-        <option value="mrs">Mrs.</option>
-        <option value="miss">Miss</option>
-    </select>
-    <h2>Account Particulars</h2>
-    <label for="login-id">Login ID</label>
-    <input type="text" id="login-id" name="login-id">
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password">
-    <label for="confirm-password">Confirm Password</label>
-    <input type="password" id="confirm-password" name="confirm-password">
-    <label for="middle-name">Middle Name</label>
-    <input type="text" id="middle-name" name="middle-name">
-    <h2>Country Select</h2>
-    <label for="resident-status">Resident Status Select</label>
-    <select name="resident-status" id="resident-status">
-        <option value="indian">Indian</option>
-        <option value="foreigner">Foreigner</option>
-    </select>
-    <label for="email-id">Email-Id</label>
-    <input type="email" id="email-id" name="email-id">
-    <h2>Individual Registration</h2>
-    <label for="fund-transfer">Fund Transfer Select</label>
-    <select name="fund-transfer" id="fund-transfer">
-        <option value="account">Account</option>
-        <option value="customer">Customer</option>
-    </select>
-    <label for="first-name">First Name</label>
-    <input type="text" id="first-name" name="first-name">
-    <label for="last-name">Last Name</label>
-    <input type="text" id="last-name" name="last-name">
-    <h2>Country Select</h2>
-    <label for="country">Country Select</label>
-    <select name="country" id="country">
-        <option value="india">India</option>
-        <option value="usa">USA</option>
-    </select>
-    <label for="mobile-number">Mobile Number</label>
-    <input type="text" id="mobile-number" name="mobile-number">
-    <h2>Nick Name</h2>
-    <label for="nick-name">Nick Name</label>
-    <input type="text" id="nick-name" name="nick-name">
-    <h2>DECLARATION</h2>
-    <p>I have read, understood and hereby agree to the Terms and Conditions in respect of all products and channels. I
-        understand that any changes in the terms and conditions applicable to this relationship would be made available
-        to me on request at any IOB branches. I confirm that all accounts under this login name are operated singly and
-        in case of joint account operated by either or survivor / anyone or survivor (s) under his / her joint name
-        respectively. I do hereby declare that information furnished in this form is true to the best of my knowledge
-        and belief.</p>
-    <button type="submit">Submit</button>
-</body>
+<div class="main">
+    <div class="bg">
+        <div class="head">
+            <h2>individual-registrtion</h2>
+        </div>
+    </div>
+    <div class="user">
+        <h3>user-particurlar</h3>
+    </div>
+
+    <div class="up">
+        <div class="row">
+            <div class="clo-1">
+                <label for="">email: </label>
+            </div>
+            <div class="clo-2">
+                <input type="email" placeholder="entr your emil">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="clo-1">
+                <label for="">passwoed: </label>
+            </div>
+            <div class="clo-2">
+                <input type="password" placeholder="enter your password">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="clo-1">
+                <label for="">conform password: </label>
+            </div>
+            <div class="clo-2">
+                <input type="password" placeholder="center your paasword">
+            </div>
+
+        </div>
+    </div>
+    <div class="user">
+        <h3>user-particurlar</h3>
+    </div>
+    <div class="up-1">
+        <div class="row-1">
+            <div class="clo-3">
+                <label for="">solution:</label>
+            </div>
+            <div class="clo-4">
+                <select>
+                    <option value="">city:</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+
+                </select>
+            </div>
+            <div class="clo-3">
+                <label for="">fist name: </label>
+            </div>
+            <div class="clo-4">
+                <input type="" placeholder="entr your first name">
+            </div>
+        </div>
+
+        <div class="row-1">
+            <div class="clo-3">
+                <label for="">middle name:</label>
+            </div>
+            <div class="clo-4">
+                <input type="text" placeholder="miidale name">
+            </div>
+            <div class="clo-3">
+                <label for="">last name:</label>
+            </div>
+            <div class="clo-4">
+                <input type="" placeholder="entr your last name">
+            </div>
+        </div>
+
+        <div class="row-1">
+            <div class="clo-3">
+                <label for="">Resident state:</label>
+            </div>
+            <div class="clo-4">
+                <select>
+                    <option value="">city</option>
+                </select>
+            </div>
+            <div class="clo-3">
+                <label for="">country:</label>
+            </div>
+            <div class="clo-4">
+                <select>
+                    <option value="">city</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row-1">
+            <div class="clo-3">
+                <label for="">user emil:</label>
+            </div>
+            <div class="clo-4">
+                <input type="email" placeholder="user emil">
+            </div>
+            <div class="clo-3">
+                <label for="">mobile :</label>
+            </div>
+            <div class="clo-4">
+                <input type="number" placeholder="enter your mobile number">
+            </div>
+        </div>
+
+    </div>
+    <div class="user">
+        <h3>account-particurlar</h3>
+    </div>
+
+    <div class="up-1">
+        <div class="row-1">
+            <div class="clo-3">
+                <label for="">solution:</label>
+            </div>
+            <div class="clo-4">
+                <select>
+                    <option value="">city:</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+
+                </select>
+            </div>
+            <div class="clo-3">
+                <label for="">fist name: </label>
+            </div>
+            <div class="clo-4">
+                <input type="" placeholder="entr your first name">
+            </div>
+        </div>
+
+        <div class="row-1">
+            <div class="clo-3">
+                <label for="">middle name:</label>
+
+            </div>
+            <div class="clo-4">
+                <input type="text" placeholder="miidale name">
+            </div>
+        </div>
+        <div class="user">
+            <h3>Decleartion</h3>
+        </div>
+
+        <div class="up-1">
+            <div class="row-1">
+                <div class="per">
+                    I have read, understood and hereby agree to the Terms and Conditions in respect of all products and
+                    channels. I
+                    understand that any changes in the terms and conditions applicable to this relationship would be
+                    made available
+                    to me on request at any IOB branches. I confirm that all accounts under this login name are operated
+                    singly and
+                    in case of joint account operated by either or survivor / anyone or survivor (s) under his / her
+                    joint name
+                    respectively. I do hereby declare that information furnished in this form is true to the best of my
+                    knowledge
+                    and belief.
+                </div>
+
+            </div>
+        </div>
+        <div class="butto">
+            <button>submit</button>
+            <button>restart</button>
+        </div>
+    </div>
+
+    <body>
+
+    </body>
 
 </html>
